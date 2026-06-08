@@ -1,0 +1,115 @@
+{
+  "profile": {
+    "name": "Nguyễn Việt Đức",
+    "title": "Vị trí Công việc (ví dụ: Full Stack Developer / Data Scientist)",
+    "bio": "Hãy viết một vài câu mô tả bản thân của bạn ở đây. Đàm mê học hỏi, xây dựng các giải pháp sáng tạo và đóng góp tích cực cho các dự án phát triển công nghệ.",
+    "avatar": "/uploads/avatar.jpg",
+    "links": {
+      "email": "ducnguyenviet2005@gmail.com",
+      "phone": "0981137172",
+      "github": "",
+      "linkedin": "https://linkedin.com",
+      "website": ""
+    }
+  },
+  "projects": {
+    "CHAT- APP": {
+      "title": "Chat Messenger Application",
+      "subtitle": "Ứng dụng nhắn tin thời gian thực kết nối bảo mật",
+      "description": "Xây dựng hệ thống chat trực tuyến thời gian thực hỗ trợ gửi tin nhắn nhanh, tạo phòng trò chuyện và quản lý danh sách bạn bè với hiệu năng cao.",
+      "skills": [
+        "Node.js",
+        "Socket.io",
+        "JavaScript",
+        "HTML/CSS",
+        "Express"
+      ],
+      "customLinks": [
+        {
+          "name": "GitHub Repo",
+          "url": "https://github.com"
+        }
+      ]
+    },
+    "HAIHACO": {
+      "title": "HAIHACO Business Strategy & Case Study",
+      "subtitle": "Phân tích và nghiên cứu chiến lược chuyển đổi kinh doanh",
+      "description": "Nghiên cứu sâu mô hình kinh doanh hiện tại của công ty bánh kẹo Hải Hà (HAIHACO), đánh giá cơ hội thị trường và xây dựng báo cáo đề xuất giải pháp chiến lược.",
+      "skills": [
+        "Business Case Analysis",
+        "Market Research",
+        "Financial Projection",
+        "Consulting"
+      ],
+      "customLinks": []
+    },
+    "HCI": {
+      "title": "Human-Computer Interaction UX/UI Design",
+      "subtitle": "Thiết kế tương tác và đánh giá độ khả dụng của sản phẩm",
+      "description": "Thiết kế các mẫu wireframe và mockup độ phân giải cao cho ứng dụng di động, thực hiện các buổi khảo sát và kiểm thử người dùng để tối ưu trải nghiệm tương tác.",
+      "skills": [
+        "HCI Principles",
+        "Figma",
+        "User Experience (UX)",
+        "Interface Design (UI)",
+        "Usability Testing"
+      ],
+      "customLinks": []
+    },
+    "Lung-Mask-EBC": {
+      "title": "Lung Mask Medical Segmentation (EBC)",
+      "subtitle": "Tự động phân vùng phổi trên ảnh X-quang ngực bằng Deep Learning",
+      "description": "Nghiên cứu và phát triển mô hình học sâu (Deep Learning) để nhận diện và tách biệt tự động vùng phổi từ ảnh chụp X-quang y khoa, hỗ trợ các bác sĩ chẩn đoán nhanh.",
+      "skills": [
+        "Python",
+        "PyTorch / TensorFlow",
+        "Computer Vision",
+        "U-Net Architecture",
+        "Medical Image Processing"
+      ],
+      "customLinks": []
+    },
+    "MODU-FIT": {
+      "title": "MODU-FIT Business Plan & Financial Analysis",
+      "subtitle": "Lập kế hoạch doanh thu, chi phí vận hành và phân tích COGS",
+      "description": "Thiết lập cấu trúc chi phí giá vốn bán hàng (COGS), dự phóng báo cáo kết quả hoạt động kinh doanh và các chỉ số tài chính quan trọng cho dự án khởi nghiệp MODU-FIT.",
+      "skills": [
+        "Financial Modeling",
+        "COGS Optimization",
+        "Revenue Forecasting",
+        "Business Plan Creation"
+      ],
+      "customLinks": []
+    },
+    "Twins group": {
+      "title": "Twins Group Collaboration Platform",
+      "subtitle": "Hệ thống quản trị và cộng tác công việc nhóm",
+      "description": "Phát triển công cụ trực tuyến hỗ trợ các nhóm làm việc cùng nhau: lên lịch trình, phân chia đầu việc, chia sẻ tài liệu và đo lường hiệu suất dự án trực quan.",
+      "skills": [
+        "Software Engineering",
+        "Agile/Scrum",
+        "GitHub Workflow",
+        "React",
+        "RESTful API"
+      ],
+      "customLinks": []
+    },
+    "Yugioh_AR": {
+      "title": "Yugioh Augmented Reality (AR) Cards",
+      "subtitle": "Ứng dụng tương tác 3D quét thẻ bài Yugioh bằng AR",
+      "description": "Thiết kế ứng dụng AR giúp hiển thị các nhân vật quái thú 3D chuyển động sống động ngay trên camera điện thoại khi quét qua các lá bài Yugioh vật lý.",
+      "skills": [
+        "Augmented Reality (AR)",
+        "Unity3D",
+        "Vuforia Engine",
+        "C# Programming",
+        "3D Animation"
+      ],
+      "customLinks": []
+    }
+  },
+  "roadmap": {
+    "shortTerm": "Học hỏi và nâng cao kiến thức phát triển phần mềm, rèn luyện tư duy lập trình chuyên nghiệp và tìm kiếm cơ hội thực tập tại doanh nghiệp công nghệ uy tín.",
+    "longTerm": "Trở thành một kỹ sư phần mềm cao cấp (Senior Software Engineer) hoặc Kiến trúc sư giải pháp (Solution Architect), dẫn dắt các dự án quy mô lớn và đóng góp giá trị cho cộng đồng."
+  }
+}

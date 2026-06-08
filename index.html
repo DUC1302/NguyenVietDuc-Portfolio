@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Professional Portfolio</title>
+  <!-- Google Fonts: Plus Jakarta Sans for premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons for clean, thin line iconography -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Local Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background mesh grid for texture -->
+  <div class="mesh-background"></div>
+
+  <!-- Header Section -->
+  <header class="app-header">
+    <div class="header-container">
+      <a href="./" class="logo" style="text-decoration: none;">
+        <span class="logo-dot"></span>
+        <span class="logo-text">PROPORTFOLIO</span>
+      </a>
+      
+      <div class="header-actions">
+        <!-- Viewer / Editor Mode Switcher -->
+        <div class="mode-switch-wrapper hide" id="modeSwitchWrapper">
+          <span class="mode-label viewer-label active">Viewer</span>
+          <button class="mode-toggle-btn" id="modeToggle" aria-label="Toggle edit mode">
+            <span class="toggle-slider"></span>
+          </button>
+          <span class="mode-label editor-label">Editor</span>
+        </div>
+
+        <button id="saveAllBtn" class="btn btn-primary hide">
+          <i data-lucide="save"></i>
+          <span>Save Changes</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-content">
+    
+    <!-- Hero / Profile Section -->
+    <section class="profile-section">
+      <div class="profile-container">
+        
+        <!-- Avatar Wrapper -->
+        <div class="avatar-wrapper">
+          <div class="avatar-card">
+            <!-- Fallback initials when no image -->
+            <div id="avatarFallback" class="avatar-fallback">CV</div>
+            <img id="avatarImage" class="avatar-img hide" src="" alt="Profile Picture">
+            
+            <!-- Upload Overlay (Visible in Edit Mode) -->
+            <div class="avatar-upload-overlay" id="avatarUploadArea">
+              <i data-lucide="camera" class="upload-icon"></i>
+              <span>Upload Photo</span>
+              <input type="file" id="avatarInput" accept="image/*" class="hide">
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Details -->
+        <div class="profile-details">
+          <div class="profile-header-group">
+            <h1 id="profileName" class="editable-text-field" data-placeholder="Full Name">Loading...</h1>
+            <p id="profileTitle" class="profile-title editable-text-field" data-placeholder="Your Professional Title (e.g. Full-Stack Developer)">Loading...</p>
+          </div>
+          
+          <p id="profileBio" class="profile-bio editable-textarea-field" data-placeholder="Write a brief bio about yourself. What are your core values, technical focuses, and career interests?">Loading...</p>
+          
+          <!-- Contact Links -->
+          <div class="contact-links-grid" id="contactLinksContainer">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-line"></span>
+          Dự án nổi bật
+        </h2>
+        <p class="section-subtitle">Danh sách các dự án thực tế đã hoàn thành và triển khai.</p>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Rendered dynamically by JS -->
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Loading projects...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Roadmap Section -->
+    <section class="roadmap-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-line"></span>
+          Lộ trình phát triển bản thân
+        </h2>
+        <p class="section-subtitle">Định hướng sự nghiệp và kế hoạch hành động ngắn hạn & dài hạn.</p>
+      </div>
+
+      <div class="roadmap-grid">
+        <!-- Short-Term Roadmap Card -->
+        <div class="roadmap-card">
+          <div class="roadmap-card-header">
+            <div class="roadmap-icon-box short-term">
+              <i data-lucide="compass"></i>
+            </div>
+            <h3>Kế hoạch ngắn hạn (1-2 năm)</h3>
+          </div>
+          <div id="roadmapShortTermViewer" class="roadmap-text-content"></div>
+          <div id="roadmapShortTermEditor" class="hide">
+            <textarea id="roadmapShortTermInput" class="roadmap-textarea" placeholder="Nhập lộ trình ngắn hạn của bạn ở đây..."></textarea>
+          </div>
+        </div>
+
+        <!-- Long-Term Roadmap Card -->
+        <div class="roadmap-card">
+          <div class="roadmap-card-header">
+            <div class="roadmap-icon-box long-term">
+              <i data-lucide="trending-up"></i>
+            </div>
+            <h3>Kế hoạch dài hạn (3-5 năm)</h3>
+          </div>
+          <div id="roadmapLongTermViewer" class="roadmap-text-content"></div>
+          <div id="roadmapLongTermEditor" class="hide">
+            <textarea id="roadmapLongTermInput" class="roadmap-textarea" placeholder="Nhập lộ trình dài hạn của bạn ở đây..."></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Detailed View Modal -->
+  <div class="modal-overlay hide" id="projectModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-body">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <div class="project-icon-box">
+            <i data-lucide="folder-git-2" class="proj-icon"></i>
+          </div>
+          <div class="modal-title-group">
+            <!-- Viewer Mode Title -->
+            <div id="modalHeaderViewer">
+              <h3 id="modalProjectTitle">Project Title</h3>
+              <p id="modalProjectSubtitle" class="modal-project-subtitle">Project Subtitle</p>
+            </div>
+            <!-- Editor Mode Title Inputs -->
+            <div id="modalHeaderEditor" class="hide">
+              <input type="text" id="projectTitleInput" class="editor-title-input" placeholder="Tên dự án (Ví dụ: Chat Messenger)">
+              <input type="text" id="projectSubtitleInput" class="editor-subtitle-input" placeholder="Mô tả ngắn gọn (Ví dụ: Hệ thống chat thời gian thực)">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-content-grid">
+          <!-- Left side: Description & Skills -->
+          <div class="modal-main-content">
+            
+            <!-- What I Did Section -->
+            <div class="detail-section">
+              <h4 class="detail-section-title">
+                <i data-lucide="check-square" class="section-icon"></i>
+                Chi tiết công việc đã làm
+              </h4>
+              
+              <!-- Viewer Mode Content -->
+              <div id="modalDescViewer" class="markdown-content"></div>
+              
+              <!-- Editor Mode Content -->
+              <div id="modalDescEditor" class="hide">
+                <textarea id="projectDescInput" class="editor-textarea" rows="6" placeholder="Describe what you did in this project, your role, architecture, and accomplishments..."></textarea>
+              </div>
+            </div>
+
+            <!-- Skills Learned Section -->
+            <div class="detail-section">
+              <h4 class="detail-section-title">
+                <i data-lucide="wrench" class="section-icon"></i>
+                Công cụ & Kỹ năng đã dùng
+              </h4>
+              
+              <!-- Viewer Mode Tags -->
+              <div id="modalSkillsViewer" class="skills-tags-container"></div>
+              
+              <!-- Editor Mode Tags Input -->
+              <div id="modalSkillsEditor" class="hide">
+                <div class="skills-input-wrapper">
+                  <input type="text" id="newSkillInput" class="tag-input" placeholder="Type a skill and press Enter (e.g. React)">
+                  <button type="button" id="addSkillBtn" class="btn btn-secondary-sm">Add</button>
+                </div>
+                <div id="modalSkillsEditorTags" class="skills-tags-container editor-tags-list"></div>
+              </div>
+            </div>
+
+            <!-- External Links Section (Only editable in Editor Mode or shown if customLinks exist) -->
+            <div class="detail-section" id="externalLinksSection">
+              <h4 class="detail-section-title">
+                <i data-lucide="external-link" class="section-icon"></i>
+                Liên kết tham khảo thêm
+              </h4>
+              
+              <div id="externalLinksViewer" class="external-links-container"></div>
+              
+              <div id="externalLinksEditor" class="hide">
+                <div class="link-inputs-list" id="linkInputsList">
+                  <!-- Custom links input fields populated dynamically -->
+                </div>
+                <button type="button" id="addLinkBtn" class="btn btn-secondary-sm">
+                  <i data-lucide="plus"></i> Add Custom Link
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right side: Attachments & Directory Files -->
+          <div class="modal-sidebar">
+            <div class="sidebar-section">
+              <h4 class="detail-section-title">
+                <i data-lucide="paperclip" class="sidebar-section-icon"></i>
+                Tài liệu & Tệp dự án
+              </h4>
+              <p class="sidebar-section-desc">Các tệp tin báo cáo, mã nguồn có sẵn trong thư mục dự án cục bộ:</p>
+              
+              <div class="files-list" id="projectFilesList">
+                <!-- Auto-populated from project directory scan -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Actions (Visible in Edit Mode) -->
+        <div class="modal-footer hide" id="modalFooter">
+          <button id="modalDiscardBtn" class="btn btn-secondary">Hủy bỏ</button>
+          <button id="modalSaveBtn" class="btn btn-primary">Xác nhận thay đổi</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
