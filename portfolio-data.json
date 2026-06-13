@@ -1,115 +1,301 @@
 {
   "profile": {
     "name": "Nguyễn Việt Đức",
-    "title": "Vị trí Công việc (ví dụ: Full Stack Developer / Data Scientist)",
-    "bio": "Hãy viết một vài câu mô tả bản thân của bạn ở đây. Đàm mê học hỏi, xây dựng các giải pháp sáng tạo và đóng góp tích cực cho các dự án phát triển công nghệ.",
+    "title": "Creative Technologist / Product Builder / Data-Driven Problem Solver",
+    "bio": "Sinh viên ngành Công nghệ đổi mới sáng tạo, định vị bản thân là một người giải quyết vấn đề bằng công nghệ và dữ liệu. Đam mê xây dựng các sản phẩm thực tế từ lập trình ứng dụng, phân tích khoa học dữ liệu đến tối ưu trải nghiệm thiết kế tương tác người-máy (HCI) và hoạch định chiến lược kinh doanh.",
     "avatar": "/uploads/avatar.jpg",
     "links": {
       "email": "ducnguyenviet2005@gmail.com",
       "phone": "0981137172",
-      "github": "",
-      "linkedin": "https://linkedin.com",
+      "github": "https://github.com/nguyen-viet-duc",
+      "linkedin": "https://www.linkedin.com/in/duc-ngviet/",
       "website": ""
+    },
+    "philosophy": "Sự giao thoa giữa dữ liệu chính xác, thiết kế tương tác tinh tế và lập trình hệ thống tối ưu là chìa khóa để kiến tạo nên các giải pháp đột phá giải quyết tốt bài toán kinh tế thực tế.",
+    "stats": [
+      {
+        "number": "7+",
+        "label": "Dự án Đa lĩnh vực"
+      },
+      {
+        "number": "4",
+        "label": "Trụ cột Chuyên môn"
+      },
+      {
+        "number": "100%",
+        "label": "Đam mê thực tế"
+      }
+    ],
+    "skills": {
+      "Excel & Mô hình tài chính (P&L, COGS)": 70,
+      "Figma (UI/UX Design, Prototyping)": 60,
+      "Python & PyTorch (Deep Learning, AI)": 80,
+      "Unity3D & C# (Game Dev & AR Cards)": 75,
+      "Node.js / React (Fullstack Web)": 50
     }
   },
   "projects": {
     "CHAT- APP": {
       "title": "Chat Messenger Application",
       "subtitle": "Ứng dụng nhắn tin thời gian thực kết nối bảo mật",
-      "description": "Xây dựng hệ thống chat trực tuyến thời gian thực hỗ trợ gửi tin nhắn nhanh, tạo phòng trò chuyện và quản lý danh sách bạn bè với hiệu năng cao.",
+      "category": "Software & Game Dev",
+      "description": "Ứng dụng nhắn tin và mạng xã hội thời gian thực, tích hợp đa ngôn ngữ và quản lý trạng thái người dùng thông minh trên nền tảng Flutter.",
+      "problem": "Thiếu sự tương tác tức thì do không biết trạng thái hoạt động (online/offline) của bạn bè.\nRào cản ngôn ngữ khi tiếp cận người dùng toàn cầu.\nYêu cầu hệ thống backend ổn định, bảo mật và đồng bộ dữ liệu thực tế.",
+      "solution": "Backend Hybrid: Kết hợp Firebase (Xác thực, Firestore) và Supabase để tối ưu lưu trữ.\nPresence System: Sử dụng WidgetsBindingObserver tự động cập nhật trạng thái isOnline và lastActive theo vòng đời ứng dụng.\nĐa ngôn ngữ: Tích hợp EasyLocalization (Việt/Anh).\nUI/UX: Thiết kế theo chuẩn Material 3, hỗ trợ Dark Mode.",
+      "impact": "Tăng trải nghiệm người dùng nhờ tính năng nhận diện trạng thái thực.\nGiao diện hiện đại, tốc độ phản hồi nhanh và tính bảo mật cao qua AuthGate.\nSẵn sàng mở rộng quy mô nhờ cấu trúc code sạch và backend linh hoạt.",
+      "featured": false,
       "skills": [
-        "Node.js",
-        "Socket.io",
-        "JavaScript",
-        "HTML/CSS",
-        "Express"
+        "Dart",
+        "Flutter",
+        "Framework",
+        "Firebase",
+        "Subabase"
       ],
-      "customLinks": [
+      "customLinks": [],
+      "files": [
         {
-          "name": "GitHub Repo",
-          "url": "https://github.com"
+          "name": "my_messenger.zip",
+          "sizeBytes": 1215010020,
+          "isDir": false,
+          "url": "./CHAT-%20APP/my_messenger.zip"
         }
       ]
     },
     "HAIHACO": {
       "title": "HAIHACO Business Strategy & Case Study",
       "subtitle": "Phân tích và nghiên cứu chiến lược chuyển đổi kinh doanh",
+      "category": "Product & Business",
       "description": "Nghiên cứu sâu mô hình kinh doanh hiện tại của công ty bánh kẹo Hải Hà (HAIHACO), đánh giá cơ hội thị trường và xây dựng báo cáo đề xuất giải pháp chiến lược.",
+      "problem": "Công ty Cổ phần Bánh kẹo Hải Hà (HAIHACO) đối mặt với sức ép cạnh tranh khốc liệt từ Kinh Đô, Hữu Nghị và hàng ngoại nhập. Doanh nghiệp cần định hình lại dòng sản phẩm chủ lực, tái cơ cấu chi phí vận hành và tối ưu hóa hệ thống phân phối đa kênh để tăng trưởng doanh thu.",
+      "solution": "Thực hiện nghiên cứu thị trường bánh kẹo toàn diện qua mô hình kinh điển SWOT, PESTEL, Porter's 5 Forces. Phân tích báo cáo tài chính của HAIHACO qua nhiều kỳ kinh doanh nhằm đánh giá các chỉ số sinh lời cốt lõi (ROE, ROA, ROS). Đề xuất giải pháp thiết thực về thiết kế lại bao bì sản phẩm và tối ưu kênh GT/MT.",
+      "impact": "Biên soạn bộ báo cáo phân tích chiến lược chi tiết dạng PDF và thiết lập mô hình tính toán tài chính doanh nghiệp hoàn chỉnh đính kèm trong thư mục dự án.",
+      "featured": false,
       "skills": [
-        "Business Case Analysis",
+        "Business Strategy",
         "Market Research",
-        "Financial Projection",
-        "Consulting"
+        "Financial Analysis",
+        "Management Consulting",
+        "Excel Modeling"
       ],
-      "customLinks": []
+      "customLinks": [],
+      "files": [
+        {
+          "name": "Business Case (final ver).pdf",
+          "sizeBytes": 25083477,
+          "isDir": false,
+          "url": "./HAIHACO/Business%20Case%20(final%20ver).pdf"
+        },
+        {
+          "name": "NHÓM 01 _ X-PANSE _ Report - HAIHACO.pdf",
+          "sizeBytes": 752842,
+          "isDir": false,
+          "url": "./HAIHACO/NH%C3%93M%2001%20_%20X-PANSE%20_%20Report%20-%20HAIHACO.pdf"
+        }
+      ]
     },
     "HCI": {
-      "title": "Human-Computer Interaction UX/UI Design",
+      "title": "\"Library+\" - HCI UX/UI Design",
       "subtitle": "Thiết kế tương tác và đánh giá độ khả dụng của sản phẩm",
-      "description": "Thiết kế các mẫu wireframe và mockup độ phân giải cao cho ứng dụng di động, thực hiện các buổi khảo sát và kiểm thử người dùng để tối ưu trải nghiệm tương tác.",
+      "category": "UI/UX Design",
+      "description": "Dự án \"Library+\" ứng dụng phương pháp Human-Centered Design (HCD) để tái thiết kế website thư viện. Giải pháp biến hệ thống đặt chỗ cơ bản thành một nền tảng thông minh, giúp sinh viên tìm kiếm chỗ ngồi dễ dàng, trực quan và tối ưu hóa toàn bộ trải nghiệm học tập.",
+      "problem": "Tái thiết kế hệ thống đặt chỗ thư viện dựa trên quy trình Human-Centered Design (HCD) nhằm giải quyết tình trạng giao diện cũ rối rắm, sơ đồ không gian thiếu trực quan, không cho phép hủy/chỉnh sửa chỗ và thiếu hỗ trợ khi người dùng gặp rắc rối.",
+      "solution": "Nâng cấp toàn diện UI/UX (tối ưu hóa mã màu, làm nổi bật nút điều hướng, thêm pop-up xác nhận), bổ sung bộ lọc chỗ ngồi linh hoạt, tính năng hủy/đổi lịch và tích hợp AI Chatbot để hỗ trợ người dùng theo thời gian thực.",
+      "impact": "Tối ưu hóa quy trình đặt chỗ chỉ còn 2-3 bước, nhận phản hồi tích cực với 4.8/5 điểm Usability từ kiểm thử thực tế (User Testing). Đề xuất thành công các chiến lược kiểm thử nâng cao (Think-Aloud, User Journey Mapping) để đưa sản phẩm đạt chuẩn ngành.",
+      "featured": true,
       "skills": [
-        "HCI Principles",
         "Figma",
         "User Experience (UX)",
-        "Interface Design (UI)",
-        "Usability Testing"
+        "User Interface (UI)",
+        "Usability Testing",
+        "UX Research"
       ],
-      "customLinks": []
+      "customLinks": [
+        {
+          "name": "Figma Prototype",
+          "url": "https://www.figma.com/proto/L1keDpPQpt62Wk91i1xuRA/Hi-fi?node-id=0-1&t=1WlTog8Svy2rHmib-1"
+        }
+      ],
+      "files": [
+        {
+          "name": "duc_text.txt",
+          "sizeBytes": 20447,
+          "isDir": false,
+          "url": "./HCI/duc_text.txt"
+        },
+        {
+          "name": "extract_pdf.py",
+          "sizeBytes": 371,
+          "isDir": false,
+          "url": "./HCI/extract_pdf.py"
+        },
+        {
+          "name": "FINAL PROJECT REPORT.pdf",
+          "sizeBytes": 16631259,
+          "isDir": false,
+          "url": "./HCI/FINAL%20PROJECT%20REPORT.pdf"
+        },
+        {
+          "name": "Link gg dive video.txt",
+          "sizeBytes": 87,
+          "isDir": false,
+          "url": "./HCI/Link%20gg%20dive%20video.txt"
+        },
+        {
+          "name": "NguyenVietDuc_31231024239.pdf",
+          "sizeBytes": 1376718,
+          "isDir": false,
+          "url": "./HCI/NguyenVietDuc_31231024239.pdf"
+        },
+        {
+          "name": "report_text.txt",
+          "sizeBytes": 4842,
+          "isDir": false,
+          "url": "./HCI/report_text.txt"
+        }
+      ]
     },
     "Lung-Mask-EBC": {
       "title": "Lung Mask Medical Segmentation (EBC)",
       "subtitle": "Tự động phân vùng phổi trên ảnh X-quang ngực bằng Deep Learning",
+      "category": "Data Analytics",
       "description": "Nghiên cứu và phát triển mô hình học sâu (Deep Learning) để nhận diện và tách biệt tự động vùng phổi từ ảnh chụp X-quang y khoa, hỗ trợ các bác sĩ chẩn đoán nhanh.",
+      "problem": "Nhận diện vùng phổi bị tổn thương trên ảnh X-quang lồng ngực là quy trình thủ công tốn thời gian và dễ sai sót. Cần tự động hóa tách vùng phổi (Semantic Segmentation) với độ chính xác cao để hỗ trợ tiền xử lý ảnh y khoa, phát hiện sớm viêm phổi, lao hay ung thư.",
+      "solution": "Nghiên cứu và huấn luyện kiến trúc mạng tích chập chuyên dụng U-Net bằng ngôn ngữ Python và thư viện PyTorch. Thực hiện tiền xử lý ảnh y tế nâng cao và tăng cường dữ liệu (Data Augmentation) để hạn chế Overfitting. Sử dụng các hàm Dice Loss phối hợp BCE Loss để tối ưu hóa biên độ phân tách.",
+      "impact": "Mô hình đạt độ chính xác ấn tượng được kiểm nghiệm qua chỉ số Dice Coefficient và IoU cao. Kết quả phân vùng được trực quan hóa chập trực tiếp lên ảnh gốc, xuất bản báo cáo phân tích chuyên sâu LUNG MASK EBC.pdf.",
+      "featured": true,
       "skills": [
         "Python",
-        "PyTorch / TensorFlow",
+        "PyTorch",
         "Computer Vision",
-        "U-Net Architecture",
-        "Medical Image Processing"
+        "U-Net",
+        "Medical Image Processing",
+        "Deep Learning"
       ],
-      "customLinks": []
+      "customLinks": [],
+      "files": [
+        {
+          "name": "extracted_text.txt",
+          "sizeBytes": 117452,
+          "isDir": false,
+          "url": "./Lung-Mask-EBC/extracted_text.txt"
+        },
+        {
+          "name": "LUNG MASK EBC.pdf",
+          "sizeBytes": 20198222,
+          "isDir": false,
+          "url": "./Lung-Mask-EBC/LUNG%20MASK%20EBC.pdf"
+        },
+        {
+          "name": "Lung-Mask-EBC-Report.pdf",
+          "sizeBytes": 18221272,
+          "isDir": false,
+          "url": "./Lung-Mask-EBC/Lung-Mask-EBC-Report.pdf"
+        }
+      ]
     },
     "MODU-FIT": {
       "title": "MODU-FIT Business Plan & Financial Analysis",
       "subtitle": "Lập kế hoạch doanh thu, chi phí vận hành và phân tích COGS",
+      "category": "Product & Business",
       "description": "Thiết lập cấu trúc chi phí giá vốn bán hàng (COGS), dự phóng báo cáo kết quả hoạt động kinh doanh và các chỉ số tài chính quan trọng cho dự án khởi nghiệp MODU-FIT.",
+      "problem": "Dự án khởi nghiệp thời trang thể thao MODU-FIT cần gọi vốn đầu tư và định hình tài chính vận hành. Thử thách là thiết lập chính xác cấu trúc giá vốn bán hàng (COGS) đa mặt hàng, dự phóng dòng tiền (Cash Flow) và kết quả kinh doanh P&L trong 3 năm để thuyết phục nhà đầu tư.",
+      "solution": "Xây dựng mô hình tài chính động liên kết bằng Excel. Thiết lập cấu trúc tính COGS chi tiết cho từng sản phẩm, dự phóng doanh thu đa kịch bản (tốt nhất, cơ sở, xấu nhất) và lập bảng cân đối kế toán dự kiến. Thiết kế slide Pitching dự án toàn diện.",
+      "impact": "Hoàn thiện hệ thống tài chính gọi vốn chuyên nghiệp với bảng COGS, báo cáo tài chính P&L 3 năm và slide Pitch Deck hoàn chỉnh, nhận đánh giá cao từ ban giám khảo.",
+      "featured": true,
       "skills": [
         "Financial Modeling",
         "COGS Optimization",
         "Revenue Forecasting",
-        "Business Plan Creation"
+        "Business Planning",
+        "Pitching",
+        "Excel Modeling"
       ],
-      "customLinks": []
+      "customLinks": [],
+      "files": [
+        {
+          "name": "14-Nhom-03-Morning.pdf",
+          "sizeBytes": 12860087,
+          "isDir": false,
+          "url": "./MODU-FIT/14-Nhom-03-Morning.pdf"
+        },
+        {
+          "name": "Financial Projection.pdf",
+          "sizeBytes": 56658,
+          "isDir": false,
+          "url": "./MODU-FIT/Financial%20Projection.pdf"
+        },
+        {
+          "name": "MODU-FIT COGS.pdf",
+          "sizeBytes": 92610,
+          "isDir": false,
+          "url": "./MODU-FIT/MODU-FIT%20COGS.pdf"
+        },
+        {
+          "name": "MODU-FIT.pdf",
+          "sizeBytes": 3161990,
+          "isDir": false,
+          "url": "./MODU-FIT/MODU-FIT.pdf"
+        }
+      ]
     },
     "Twins group": {
       "title": "Twins Group Collaboration Platform",
       "subtitle": "Hệ thống quản trị và cộng tác công việc nhóm",
+      "category": "Software & Game Dev",
       "description": "Phát triển công cụ trực tuyến hỗ trợ các nhóm làm việc cùng nhau: lên lịch trình, phân chia đầu việc, chia sẻ tài liệu và đo lường hiệu suất dự án trực quan.",
+      "problem": "Các đội nhóm cộng tác dự án thường gặp tình trạng thông tin giao tiếp rời rạc, phân chia công việc trùng lặp và thiếu công cụ theo dõi tiến độ Kanban trực quan tích hợp các chỉ số báo cáo hiệu suất.",
+      "solution": "Phát triển ứng dụng web cộng tác nhóm. Áp dụng quy trình Agile/Scrum để lập kế hoạch Sprint và họp Daily. Lập trình giao diện bảng Kanban kéo thả bằng React.js, xây dựng RESTful API với Node.js. Sử dụng Git/GitHub để quản trị mã nguồn, review code và xử lý xung đột merge.",
+      "impact": "Xây dựng thành công ứng dụng web quản lý tiến độ trực quan, tối ưu quy trình làm việc nhóm và xuất báo cáo kỹ thuật FINAL-PROJECT-REPORT.pdf.",
+      "featured": false,
       "skills": [
         "Software Engineering",
         "Agile/Scrum",
         "GitHub Workflow",
-        "React",
-        "RESTful API"
+        "React.js",
+        "Node.js",
+        "RESTful API",
+        "Git"
       ],
-      "customLinks": []
+      "customLinks": [],
+      "files": [
+        {
+          "name": "FINAL-PROJECT-REPORT.pdf",
+          "sizeBytes": 140089,
+          "isDir": false,
+          "url": "./Twins%20group/FINAL-PROJECT-REPORT.pdf"
+        }
+      ]
     },
     "Yugioh_AR": {
       "title": "Yugioh Augmented Reality (AR) Cards",
       "subtitle": "Ứng dụng tương tác 3D quét thẻ bài Yugioh bằng AR",
+      "category": "Software & Game Dev",
       "description": "Thiết kế ứng dụng AR giúp hiển thị các nhân vật quái thú 3D chuyển động sống động ngay trên camera điện thoại khi quét qua các lá bài Yugioh vật lý.",
+      "problem": "Trò chơi thẻ bài Yugioh giấy truyền thống thiếu tính trực quan và sinh động trong trải nghiệm thi đấu. Cần kết hợp công nghệ Thực tế ảo tăng cường (AR) để triệu hồi các mô hình quái thú 3D hoạt ảnh mượt mà tương tác trực tiếp trên lá bài vật lý.",
+      "solution": "Lập trình ứng dụng AR bằng engine game Unity3D và ngôn ngữ C#. Tích hợp Vuforia SDK để nhận diện và theo dõi hình ảnh thẻ bài (Image Tracking). Thực hiện tối ưu hóa lưới đa giác mô hình 3D (Poly-count reduction) và bake ánh sáng để ứng dụng chạy mượt mà trên thiết bị di động cấu hình trung bình.",
+      "impact": "Phát triển thành công ứng dụng AR triệu hồi quái thú 3D sống động, tạo poster quảng bá sản phẩm chuyên nghiệp đính kèm trong thư mục dự án.",
+      "featured": true,
       "skills": [
-        "Augmented Reality (AR)",
+        "AR Development",
         "Unity3D",
         "Vuforia Engine",
         "C# Programming",
-        "3D Animation"
+        "3D Animation",
+        "Mobile Optimization"
       ],
-      "customLinks": []
+      "customLinks": [],
+      "files": [
+        {
+          "name": "poster.png",
+          "sizeBytes": 5286068,
+          "isDir": false,
+          "url": "./Yugioh_AR/poster.png"
+        }
+      ]
     }
   },
   "roadmap": {
-    "shortTerm": "Học hỏi và nâng cao kiến thức phát triển phần mềm, rèn luyện tư duy lập trình chuyên nghiệp và tìm kiếm cơ hội thực tập tại doanh nghiệp công nghệ uy tín.",
-    "longTerm": "Trở thành một kỹ sư phần mềm cao cấp (Senior Software Engineer) hoặc Kiến trúc sư giải pháp (Solution Architect), dẫn dắt các dự án quy mô lớn và đóng góp giá trị cho cộng đồng."
+    "shortTerm": "Thực tập & Cọ xát: Bắt đầu với vị trí BA Intern, thành thạo kỹ năng thu thập yêu cầu, viết tài liệu đặc tả (PRD) và mô hình hóa quy trình (UML/BPMN).\nTrở thành BA độc lập: Đủ năng lực tự vận hành các dự án vừa, ứng dụng dữ liệu (SQL, Power BI) vào thực tế để hỗ trợ thiết kế sản phẩm.",
+    "longTerm": "Chuyên gia (Senior BA): Nâng cao nghiệp vụ, đủ sức tư vấn giải pháp và thiết kế các hệ thống có độ phức tạp cao.\nQuản lý (BA Team Leader / Product Owner): Dẫn dắt đội ngũ BA, định hướng tầm nhìn sản phẩm và giải quyết các bài toán công nghệ giúp doanh nghiệp tối ưu hóa lợi nhuận."
   }
 }

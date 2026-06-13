@@ -46,61 +46,119 @@
 
   <main class="app-content">
     
-    <!-- Hero / Profile Section -->
-    <section class="profile-section">
-      <div class="profile-container">
+    <!-- Bento Dashboard Section (Home / About Me) -->
+    <section class="bento-dashboard">
+      <div class="bento-grid">
         
-        <!-- Avatar Wrapper -->
-        <div class="avatar-wrapper">
-          <div class="avatar-card">
-            <!-- Fallback initials when no image -->
-            <div id="avatarFallback" class="avatar-fallback">CV</div>
-            <img id="avatarImage" class="avatar-img hide" src="" alt="Profile Picture">
-            
-            <!-- Upload Overlay (Visible in Edit Mode) -->
-            <div class="avatar-upload-overlay" id="avatarUploadArea">
-              <i data-lucide="camera" class="upload-icon"></i>
-              <span>Upload Photo</span>
-              <input type="file" id="avatarInput" accept="image/*" class="hide">
+        <!-- Bento Block 1: Hero Banner -->
+        <div class="bento-card bento-hero">
+          <div class="bento-badge">
+            <span class="pulse-dot"></span>
+            Creative Technologist
+          </div>
+          <h1 id="profileName" class="editable-text-field" data-placeholder="Họ và Tên">Loading...</h1>
+          <p id="profileTitle" class="profile-title editable-text-field" data-placeholder="Vị trí công việc (ví dụ: Product Builder)">Loading...</p>
+          <p id="profileBio" class="profile-bio editable-textarea-field" data-placeholder="Giới thiệu ngắn gọn về bản thân của bạn...">Loading...</p>
+        </div>
+
+        <!-- Bento Block 2: Profile Picture & Socials -->
+        <div class="bento-card bento-profile">
+          <div class="avatar-wrapper">
+            <div class="avatar-card">
+              <div id="avatarFallback" class="avatar-fallback">CV</div>
+              <img id="avatarImage" class="avatar-img hide" src="" alt="Ảnh chân dung">
+              
+              <!-- Upload Overlay (Visible in Edit Mode) -->
+              <div class="avatar-upload-overlay" id="avatarUploadArea">
+                <i data-lucide="camera" class="upload-icon"></i>
+                <span>Tải ảnh đại diện</span>
+                <input type="file" id="avatarInput" accept="image/*" class="hide">
+              </div>
+            </div>
+          </div>
+          <div class="contact-links-grid" id="contactLinksContainer">
+            <!-- Rendered dynamically by JS -->
+          </div>
+        </div>
+
+        <!-- Bento Block 3: Work Philosophy -->
+        <div class="bento-card bento-philosophy">
+          <div class="bento-card-header">
+            <div class="bento-card-header-title">
+              <i data-lucide="sparkles" class="bento-header-icon"></i>
+              <h3>Work Philosophy</h3>
+            </div>
+          </div>
+          <blockquote class="philosophy-quote editable-textarea-field" id="philosophyQuote" data-placeholder="Nhập triết lý làm việc của bạn ở đây...">
+            Loading...
+          </blockquote>
+        </div>
+
+        <!-- Bento Block 4: Quick Stats -->
+        <div class="bento-card bento-stats">
+          <div class="stats-grid" id="statsGrid">
+            Loading...
+          </div>
+        </div>
+
+        <!-- Bento Block 5: Interactive Skills Chart -->
+        <div class="bento-card bento-skills">
+          <div class="bento-card-header">
+            <div class="bento-card-header-title">
+              <i data-lucide="sliders" class="bento-header-icon"></i>
+              <h3>Skills & Tools</h3>
+            </div>
+          </div>
+          <div class="skills-chart-container" id="skillsChart">
+            <!-- Rendered by JS or fallback static structure -->
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Excel & Mô hình tài chính (P&L, COGS)</span>
+                <span class="skill-val">90%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" style="width: 90%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Figma (UI/UX Design, Prototyping)</span>
+                <span class="skill-val">90%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" style="width: 90%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Python & PyTorch (Deep Learning, AI)</span>
+                <span class="skill-val">85%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" style="width: 85%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Unity3D & C# (Game Dev & AR Cards)</span>
+                <span class="skill-val">80%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" style="width: 80%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Node.js / React (Fullstack Web)</span>
+                <span class="skill-val">80%</span>
+              </div>
+              <div class="skill-progress-track">
+                <div class="skill-progress-bar" style="width: 80%;"></div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Profile Details -->
-        <div class="profile-details">
-          <div class="profile-header-group">
-            <h1 id="profileName" class="editable-text-field" data-placeholder="Full Name">Loading...</h1>
-            <p id="profileTitle" class="profile-title editable-text-field" data-placeholder="Your Professional Title (e.g. Full-Stack Developer)">Loading...</p>
-          </div>
-          
-          <p id="profileBio" class="profile-bio editable-textarea-field" data-placeholder="Write a brief bio about yourself. What are your core values, technical focuses, and career interests?">Loading...</p>
-          
-          <!-- Contact Links -->
-          <div class="contact-links-grid" id="contactLinksContainer">
-            <!-- Rendered by JS -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects-section">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span class="title-line"></span>
-          Dự án nổi bật
-        </h2>
-        <p class="section-subtitle">Danh sách các dự án thực tế đã hoàn thành và triển khai.</p>
-      </div>
-
-      <!-- Project Cards Grid -->
-      <div class="projects-grid" id="projectsGrid">
-        <!-- Rendered dynamically by JS -->
-        <div class="loading-state">
-          <div class="spinner"></div>
-          <p>Loading projects...</p>
-        </div>
       </div>
     </section>
 
@@ -109,9 +167,8 @@
       <div class="section-header">
         <h2 class="section-title">
           <span class="title-line"></span>
-          Lộ trình phát triển bản thân
+          Career Roadmap
         </h2>
-        <p class="section-subtitle">Định hướng sự nghiệp và kế hoạch hành động ngắn hạn & dài hạn.</p>
       </div>
 
       <div class="roadmap-grid">
@@ -145,12 +202,77 @@
       </div>
     </section>
 
+    <!-- Featured Work Section -->
+    <section class="featured-section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-line"></span>
+          Featured Work
+        </h2>
+      </div>
+
+      <!-- Featured Cards Grid -->
+      <div class="featured-grid" id="featuredGrid">
+        <!-- Rendered dynamically by JS -->
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Đang tải dự án chọn lọc...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Work / Portfolio Section with Tagging/Filtering System -->
+    <section class="projects-section" id="portfolioSection">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-line"></span>
+          The Work
+        </h2>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="portfolio-filters" id="portfolioFilters">
+        <button class="filter-tab active" data-filter="all">
+          <i data-lucide="layout-grid"></i>
+          <span>Tất cả</span>
+        </button>
+        <button class="filter-tab" data-filter="Product & Business">
+          <i data-lucide="briefcase"></i>
+          <span>Product & Business</span>
+        </button>
+        <button class="filter-tab" data-filter="Data Analytics">
+          <i data-lucide="bar-chart-2"></i>
+          <span>Data Analytics</span>
+        </button>
+        <button class="filter-tab" data-filter="Software & Game Dev">
+          <i data-lucide="code-2"></i>
+          <span>Software & Game Dev</span>
+        </button>
+        <button class="filter-tab" data-filter="UI/UX Design">
+          <i data-lucide="palette"></i>
+          <span>UI/UX Design</span>
+        </button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Rendered dynamically by JS -->
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Đang tải danh sách dự án...</p>
+        </div>
+      </div>
+    </section>
+
+
+
+
   </main>
 
-  <!-- Detailed View Modal -->
+  <!-- Upgraded Case Study Detail Modal -->
   <div class="modal-overlay hide" id="projectModal">
     <div class="modal-container">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Đóng hộp thoại">
         <i data-lucide="x"></i>
       </button>
 
@@ -158,7 +280,7 @@
         
         <!-- Modal Header -->
         <div class="modal-header">
-          <div class="project-icon-box">
+          <div class="project-icon-box" id="modalProjectIconBox">
             <i data-lucide="folder-git-2" class="proj-icon"></i>
           </div>
           <div class="modal-title-group">
@@ -169,33 +291,92 @@
             </div>
             <!-- Editor Mode Title Inputs -->
             <div id="modalHeaderEditor" class="hide">
-              <input type="text" id="projectTitleInput" class="editor-title-input" placeholder="Tên dự án (Ví dụ: Chat Messenger)">
-              <input type="text" id="projectSubtitleInput" class="editor-subtitle-input" placeholder="Mô tả ngắn gọn (Ví dụ: Hệ thống chat thời gian thực)">
+              <input type="text" id="projectTitleInput" class="editor-title-input" placeholder="Tên dự án (Ví dụ: MODU-FIT)">
+              <input type="text" id="projectSubtitleInput" class="editor-subtitle-input" placeholder="Mô tả ngắn gọn (Ví dụ: Kế hoạch kinh doanh & COGS)">
             </div>
           </div>
         </div>
 
+        <!-- Case Study content grid (2 columns) -->
         <div class="modal-content-grid">
-          <!-- Left side: Description & Skills -->
+          
+          <!-- Left side: Narrative Case Study -->
           <div class="modal-main-content">
             
-            <!-- What I Did Section -->
-            <div class="detail-section">
-              <h4 class="detail-section-title">
-                <i data-lucide="check-square" class="section-icon"></i>
-                Chi tiết công việc đã làm
-              </h4>
-              
-              <!-- Viewer Mode Content -->
-              <div id="modalDescViewer" class="markdown-content"></div>
-              
-              <!-- Editor Mode Content -->
-              <div id="modalDescEditor" class="hide">
-                <textarea id="projectDescInput" class="editor-textarea" rows="6" placeholder="Describe what you did in this project, your role, architecture, and accomplishments..."></textarea>
+            <!-- Editor: Category & Featured Toggles -->
+            <div id="modalMetaEditor" class="editor-meta-block hide">
+              <div class="editor-field">
+                <label for="projectCategoryInput">Chuyên môn / Danh mục</label>
+                <select id="projectCategoryInput" class="editor-select">
+                  <option value="Product & Business">Product & Business</option>
+                  <option value="Data Analytics">Data Analytics</option>
+                  <option value="Software & Game Dev">Software & Game Dev</option>
+                  <option value="UI/UX Design">UI/UX Design</option>
+                </select>
+              </div>
+              <div class="editor-field-checkbox">
+                <input type="checkbox" id="projectFeaturedInput">
+                <label for="projectFeaturedInput">Đặt làm dự án đinh (Featured)</label>
               </div>
             </div>
 
-            <!-- Skills Learned Section -->
+            <!-- Case Study Block: Overview (Meta items) -->
+            <div class="case-study-block block-overview" id="blockOverview">
+              <div class="overview-meta-grid">
+                <div class="meta-item">
+                  <i data-lucide="user"></i>
+                  <div>
+                    <span class="meta-label">Vai trò</span>
+                    <span class="meta-value" id="modalProjectRole">Thực hiện chính</span>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i data-lucide="tag"></i>
+                  <div>
+                    <span class="meta-label">Chuyên môn</span>
+                    <span class="meta-value" id="modalProjectCategory">Software & Game Dev</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Study Block: Problem -->
+            <div class="case-study-block block-problem">
+              <h4 class="case-title problem-title">
+                <i data-lucide="alert-circle"></i>
+                Bài toán & Vấn đề (Problem)
+              </h4>
+              <div id="modalProblemViewer" class="case-text markdown-content"></div>
+              <div id="modalProblemEditor" class="hide">
+                <textarea id="projectProblemInput" class="editor-textarea" rows="4" placeholder="Mô tả bài toán thực tế cần giải quyết..."></textarea>
+              </div>
+            </div>
+
+            <!-- Case Study Block: Solution -->
+            <div class="case-study-block block-solution">
+              <h4 class="case-title solution-title">
+                <i data-lucide="cpu"></i>
+                Giải pháp thực hiện (Solution)
+              </h4>
+              <div id="modalSolutionViewer" class="case-text markdown-content"></div>
+              <div id="modalSolutionEditor" class="hide">
+                <textarea id="projectSolutionInput" class="editor-textarea" rows="5" placeholder="Mô tả cách tiếp cận đa chiều, giải pháp công nghệ/thiết kế/tài chính..."></textarea>
+              </div>
+            </div>
+
+            <!-- Case Study Block: Impact -->
+            <div class="case-study-block block-impact">
+              <h4 class="case-title impact-title">
+                <i data-lucide="award"></i>
+                Kết quả & Tác động (Impact)
+              </h4>
+              <div id="modalImpactViewer" class="case-text markdown-content"></div>
+              <div id="modalImpactEditor" class="hide">
+                <textarea id="projectImpactInput" class="editor-textarea" rows="4" placeholder="Mô tả kết quả đạt được, ảnh hưởng thực tế, hoặc link ứng dụng..."></textarea>
+              </div>
+            </div>
+
+            <!-- Skills & Tools -->
             <div class="detail-section">
               <h4 class="detail-section-title">
                 <i data-lucide="wrench" class="section-icon"></i>
@@ -208,20 +389,35 @@
               <!-- Editor Mode Tags Input -->
               <div id="modalSkillsEditor" class="hide">
                 <div class="skills-input-wrapper">
-                  <input type="text" id="newSkillInput" class="tag-input" placeholder="Type a skill and press Enter (e.g. React)">
-                  <button type="button" id="addSkillBtn" class="btn btn-secondary-sm">Add</button>
+                  <input type="text" id="newSkillInput" class="tag-input" placeholder="Gõ kỹ năng mới rồi nhấn Enter (ví dụ: Tableau)">
+                  <button type="button" id="addSkillBtn" class="btn btn-secondary-sm">Thêm</button>
                 </div>
                 <div id="modalSkillsEditorTags" class="skills-tags-container editor-tags-list"></div>
               </div>
             </div>
 
-            <!-- External Links Section (Only editable in Editor Mode or shown if customLinks exist) -->
-            <div class="detail-section" id="externalLinksSection">
+            <!-- Legacy General Description Section (Visible only if edited or in editor) -->
+            <div class="detail-section hide" id="modalLegacyDescSection">
               <h4 class="detail-section-title">
-                <i data-lucide="external-link" class="section-icon"></i>
-                Liên kết tham khảo thêm
+                <i data-lucide="align-left" class="section-icon"></i>
+                Mô tả chung
               </h4>
-              
+              <div id="modalDescViewer" class="markdown-content"></div>
+              <div id="modalDescEditor" class="hide">
+                <textarea id="projectDescInput" class="editor-textarea" rows="4" placeholder="Mô tả tổng quát của dự án..."></textarea>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right side: Sidebar (Documents and Custom Links) -->
+          <div class="modal-sidebar">
+            <!-- External Links Section -->
+            <div class="sidebar-section" id="externalLinksSection">
+              <h4 class="detail-section-title">
+                <i data-lucide="external-link" class="sidebar-section-icon"></i>
+                Liên kết tham khảo
+              </h4>
               <div id="externalLinksViewer" class="external-links-container"></div>
               
               <div id="externalLinksEditor" class="hide">
@@ -229,22 +425,18 @@
                   <!-- Custom links input fields populated dynamically -->
                 </div>
                 <button type="button" id="addLinkBtn" class="btn btn-secondary-sm">
-                  <i data-lucide="plus"></i> Add Custom Link
+                  <i data-lucide="plus"></i> Thêm Liên kết
                 </button>
               </div>
             </div>
 
-          </div>
-
-          <!-- Right side: Attachments & Directory Files -->
-          <div class="modal-sidebar">
+            <!-- Project Files scanned from folder -->
             <div class="sidebar-section">
               <h4 class="detail-section-title">
                 <i data-lucide="paperclip" class="sidebar-section-icon"></i>
                 Tài liệu & Tệp dự án
               </h4>
               <p class="sidebar-section-desc">Các tệp tin báo cáo, mã nguồn có sẵn trong thư mục dự án cục bộ:</p>
-              
               <div class="files-list" id="projectFilesList">
                 <!-- Auto-populated from project directory scan -->
               </div>
